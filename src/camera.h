@@ -82,8 +82,8 @@ public:
     // TODO NEW STUFF: Equivalent to above, but for vectors (distances for 1D) instead of points
     sf::Vector2f windowToWorldDist(const sf::Vector2f& vWindow) { return vWindow * mWorldUnitsPerPixel; };
     sf::Vector2f worldToWindowDist(const sf::Vector2f& vWorld) { return vWorld / mWorldUnitsPerPixel; };
-    sf::Vector2f windowPercentToWorldDist(const sf::Vector2f& vWindowPercent) { return vWindowPercent * windowSize * mWorldUnitsPerPixel; };
-    sf::Vector2f worldToWindowPercentDist(const sf::Vector2f& vWorld) { return (vWorld / mWorldUnitsPerPixel) / windowSize; };
+    sf::Vector2f windowPercentToWorldDist(const sf::Vector2f& vWindowPercent) { return vWindowPercent * mWindowSize * mWorldUnitsPerPixel; };
+    sf::Vector2f worldToWindowPercentDist(const sf::Vector2f& vWorld) { return (vWorld / mWorldUnitsPerPixel) / mWindowSize; };
     float windowToWorldDist(float vWindow) { return vWindow * mWorldUnitsPerPixel; };
     float worldToWindowDist(float vWorld) { return vWorld / mWorldUnitsPerPixel; };
 
